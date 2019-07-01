@@ -1,0 +1,25 @@
+[projects.babyshark]
+path = 'Source\Baby Shark Custom Device.lvproj'
+
+[[build.steps]]
+name = 'Config Library'
+type = 'lvBuildSpec'
+project = '{babyshark}'
+target = 'My Computer'
+build_spec = 'Configuration'
+
+[[build.steps]]
+name = 'Engine Library'
+type = 'lvBuildSpec'
+project = '{babyshark}'
+target = 'My Computer'
+build_spec = 'Engine'
+
+[package]
+type = 'nipkg'
+payload_dir = 'Built'
+install_destination = 'documents\National Instruments\NI VeriStand {veristand_version}\Custom Devices'
+
+[archive]
+build_output_dir = 'Built'
+archive_location = 'C:\MyCustomDevice'
